@@ -1,40 +1,42 @@
-# TEAM CHAMPIONS
+# TEAM CHAMPIONS — GitHub Pages
 
-A simple Vivo Team data portal that reads live data from a Google Sheets CSV export.
+Static version for:
 
-## Setup
+https://mask-sir.github.io/champions/
 
-1. Install Node.js.
-2. Copy `.env.example` to `.env`.
-3. Edit `.env`:
+## Configure the Google Sheet
 
-```env
-SITE_TITLE=TEAM CHAMPIONS
-CSV_URL=https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/export?format=csv
+Edit `config.js`:
+
+```js
+const SITE_CONFIG = {
+  title: "TEAM CHAMPIONS",
+  csvUrl: "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/export?format=csv"
+};
 ```
 
-4. Install dependencies:
+The sheet must be publicly accessible for CSV export.
 
-```bash
-npm install
-```
+## GitHub Pages
 
-5. Start locally:
+Push these files to the `main` branch and configure GitHub Pages:
+
+Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
+
+The site will be available at:
+
+https://mask-sir.github.io/champions/
+
+## Local preview
+
+Node.js installed:
 
 ```bash
 npm start
 ```
 
-6. Open http://localhost:3000
+Then open:
 
-## Google Sheets
+http://localhost:3000
 
-Make the Google Sheet available for CSV export and use:
-
-`https://docs.google.com/spreadsheets/d/SHEET_ID/export?format=csv`
-
-The website fetches the CSV when it loads and includes a cache-buster so the Refresh button requests fresh data.
-
-## Future expansion
-
-The sidebar is prepared for VBA Details and additional sections. More dashboards, filters, rankings, authentication, and Vivo-specific branding can be added later.
+No Express server or `.env` is required for GitHub Pages. `config.js` is intentionally public because the CSV URL is consumed by the browser.

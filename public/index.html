@@ -2,70 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>TEAM CHAMPIONS</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <aside class="sidebar">
     <div class="brand">
       <div class="brand-mark">V</div>
-      <div>
-        <strong id="sidebarTitle">TEAM CHAMPIONS</strong>
-        <span>Vivo Team</span>
-      </div>
+      <div><strong id="sidebarTitle">TEAM CHAMPIONS</strong><span>Vivo Team</span></div>
     </div>
-
     <nav>
       <div class="nav-title">MENU</div>
       <a class="nav-item active"><span>🏆</span> Team Champions</a>
-      <div class="nav-item locked">
-        <span>🔒</span> VBA Details <small>Locked</small>
-      </div>
+      <div class="nav-item locked"><span>🔒</span> VBA Details <small>Locked</small></div>
       <div class="coming-soon"><span>＋</span> More options coming soon</div>
     </nav>
-
     <div class="sidebar-footer">Vivo Team Portal</div>
   </aside>
 
   <main class="main">
     <header class="topbar">
-      <div>
-        <p class="eyebrow">VIVO TEAM</p>
-        <h1 id="pageTitle">TEAM CHAMPIONS</h1>
-      </div>
+      <div><p class="eyebrow">VIVO TEAM</p><h1 id="pageTitle">TEAM CHAMPIONS</h1></div>
       <div class="status"><span class="status-dot"></span> Live Data</div>
     </header>
 
     <section class="hero">
-      <div>
-        <p class="eyebrow">TEAM PERFORMANCE</p>
-        <h2>Team Champions</h2>
-        <p>Track and publish your team's latest performance data.</p>
-      </div>
+      <p class="eyebrow">TEAM PERFORMANCE</p>
+      <h2>Team Champions</h2>
+      <p>Track and publish your team's latest performance data.</p>
     </section>
 
     <section class="data-section">
       <div class="section-header">
-        <div>
-          <h2>Team Data</h2>
-          <p id="lastUpdated">Loading data...</p>
-        </div>
+        <div><h2>Team Data</h2><p id="lastUpdated">Loading data...</p></div>
         <button id="refreshBtn">↻ Refresh</button>
       </div>
-
       <div id="loading" class="message">Loading team data...</div>
-      <div id="error" class="message error hidden">Unable to load the team data.</div>
-
+      <div id="error" class="message error hidden"></div>
       <div class="table-container">
-        <table id="dataTable" class="hidden">
-          <thead id="tableHead"></thead>
-          <tbody id="tableBody"></tbody>
-        </table>
+        <table id="dataTable" class="hidden"><thead id="tableHead"></thead><tbody id="tableBody"></tbody></table>
       </div>
     </section>
   </main>
 
-  <script src="/app.js"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
